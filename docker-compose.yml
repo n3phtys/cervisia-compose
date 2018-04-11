@@ -1,0 +1,12 @@
+version: '3'
+services:
+  cervisia:
+    build: 
+      context: .
+      dockerfile: ./.docker/Dockerfile
+    env_file: ./.docker/local.env
+    ports:
+     - "8080:8080"
+    volumes:
+     - ./db:/db
+    command: /usr/cervisia/backend/cervisia-server
