@@ -9,7 +9,7 @@ RUN apt-get install -y pkg-config libssl-dev apt-utils nano
 RUN apt-get update
 RUN printenv
 
-
+RUN apt list --installed
 
 RUN ls -la /usr/include
 RUN ls -la /usr/include/openssl
@@ -42,7 +42,7 @@ RUN git clone https://github.com/n3phtys/ng-cervisia --depth 1
 WORKDIR /usr/cervisia/ng-cervisia
 RUN ls -la .
 RUN npm install
-RUN ng build --prod
+RUN ng build --prod --base-href /bierliste-test/
 WORKDIR /usr/cervisia/
 RUN rm -rf /usr/cervisia/frontend
 RUN mkdir /usr/cervisia/frontend
