@@ -10,3 +10,4 @@ services:
     volumes:
      - ./db:/db
     command: /usr/cervisia/backend/cervisia-server
+
