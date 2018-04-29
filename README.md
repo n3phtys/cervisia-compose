@@ -3,7 +3,7 @@
     docker-compose up
 
 
-Cervisia will appear on http://localhost:8080
+Cervisia will appear on http://localhost:9080
 
 
 database file will be in subdir `./db`
