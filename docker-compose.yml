@@ -1,9 +1,8 @@
 version: '3'
 services:
   cervisia:
-    build: 
-      context: .
-      dockerfile: n3phtys/cervisia-container:avh-ka-deployment
+    image: n3phtys/cervisia-container:latest
+    restart: always
     env_file: ./.docker/local.env
     ports:
      - "9080:8080"
