@@ -3,11 +3,10 @@ services:
   cervisia:
     build: 
       context: .
-      dockerfile: ./.docker/Dockerfile
+      dockerfile: n3phtys/cervisia-container:avh-ka-deployment
     env_file: ./.docker/local.env
     ports:
-     - "8080:8080"
+     - "9080:8080"
     volumes:
      - ./db:/db
-    command: /usr/cervisia/backend/cervisia-server
-
+    command: sh /db/load_json.sh && /usr/cervisia/backend/cervisia-server
