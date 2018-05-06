@@ -8,4 +8,4 @@ services:
      - "9080:8080"
     volumes:
      - ./db:/db
-    command: sh /db/load_json.sh && /usr/cervisia/backend/cervisia-server
+    command: sh -c "sh /db/load_json.sh && /usr/cervisia/backend/cervisia-server"
